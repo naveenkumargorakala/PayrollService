@@ -38,3 +38,9 @@ alter table employee_payroll
         add Taxable_pay double,
         add Income_tax double,
         add Net_pay double;
+
+update employee_payroll set department ="Sales" where id = 2 or id=3;
+insert into employee_payroll values(7, "Bhagi", 65000, '2023-11-22', 'F', 7678789877,'HPM','Marketing',65000,5000,2000,1000, 57000);
+select * from employee_payroll;
+
+select * from employee_payroll where name = "Bhagi";
