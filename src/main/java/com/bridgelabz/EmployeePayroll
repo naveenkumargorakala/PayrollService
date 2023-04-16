@@ -16,3 +16,9 @@ select * from employee_payroll;
 
 select salary from employee_payroll where name = "Bhagi";
 select * from employee_payroll where start_date between cast('2021-09-09' AS Date) and Date(now());
+
+alter table employee_payroll
+add gender varchar(10) not null;
+update employee_payroll set gender = 'M' where name ='Pratham' or name ='Anuroop' or name = 'Santosh';
+update employee_payroll set gender = 'F' where name = 'Bhagi';
+select * from employee_payroll;
