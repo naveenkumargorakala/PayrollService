@@ -7,3 +7,8 @@ create table employee_payroll (id int not null auto_increment primary key,
        								  salary double not null,
        								  start_date date not null);
 
+insert into employee_payroll values(1 ,"Pratham" ,60000, '2023-02-21');
+insert into employee_payroll values(4, "Santosh" ,50000, '2020-06-20');
+insert into employee_payroll values(3,"Bhagi" ,70000, '2021-10-15');
+insert into employee_payroll values(2 ,"Anuroop" ,56000, '2022-12-01');
+
