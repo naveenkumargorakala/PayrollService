@@ -15,7 +15,6 @@ insert into employee_payroll values(3,"Bhagi" ,70000, '2021-10-15');
 select * from employee_payroll;
 
 select salary from employee_payroll where name = "Bhagi";
-
 select * from employee_payroll where start_date between cast('2021-09-09' AS Date) and Date(now());
 
 update employee_payroll set gender = 'M' where name ='Pratham' or name ='Anuroop' or name = 'Santosh';
@@ -29,6 +28,13 @@ select max(Salary) from employee_payroll where gender = 'M' group by gender;
 select count(Salary) from employee_payroll where gender = 'M' group by gender;
 
 alter table employee_payroll
-add PhoneNumber double,
-add address varchar(100) default 'Narayana puram',
-add department varchar(10) not null;
+       add PhoneNumber double,
+       add address varchar(100) default 'Narayana puram',
+       add department varchar(10) not null;
+
+alter table employee_payroll
+        add Basic_pay double ,
+        add Deductions double,
+        add Taxable_pay double,
+        add Income_tax double,
+        add Net_pay double;
